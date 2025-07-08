@@ -171,44 +171,52 @@
       transition: all 0.2s ease-in-out;
     }
   </style>
+  <script>
+    function handleNavClick(label) {
+      const statusBox = document.getElementById('status-box');
+      if (statusBox) {
+        statusBox.innerText = 'You clicked: ' + label;
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="splunk-portfolio">
     <div class="main-title">Splunk Portfolio</div>
 
     <div class="side-by-side-sections">
-      <!-- Security Section -->
       <div class="section">
-        <a href="#link-security" class="block-title title-orange" style="width: 600px;">Security</a>
-        <a href="#link-ai" class="title-purple" style="width: 600px; font-weight: 900;">Artificial Intelligence</a>
+        <a href="#" onclick="handleNavClick('Security')" class="block-title title-orange" style="width: 600px;">Security</a>
+        <a href="#" onclick="handleNavClick('Artificial Intelligence')" class="title-purple" style="width: 600px; font-weight: 900;">Artificial Intelligence</a>
         <div class="ai-grid">
-          <a class="block" href="#link-soar">Splunk SOAR</a>
-          <a class="block" href="#link-fraud">Fraud</a>
-          <a class="block" href="#link-enterprise">Enterprise<br>Security</a>
-          <a class="block" href="#link-analyzer">Attack Analyzer</a>
-          <a class="block" href="#link-risk">Asset and Risk Intel</a>
-          <a class="block" href="#link-compliance">Compliance</a>
+          <a class="block" href="#" onclick="handleNavClick('Splunk SOAR')">Splunk SOAR</a>
+          <a class="block" href="#" onclick="handleNavClick('Fraud')">Fraud</a>
+          <a class="block" href="#" onclick="handleNavClick('Enterprise Security')">Enterprise<br>Security</a>
+          <a class="block" href="#" onclick="handleNavClick('Attack Analyzer')">Attack Analyzer</a>
+          <a class="block" href="#" onclick="handleNavClick('Asset and Risk Intel')">Asset and Risk Intel</a>
+          <a class="block" href="#" onclick="handleNavClick('Compliance')">Compliance</a>
         </div>
       </div>
 
-      <!-- Observability Section -->
       <div class="section">
-        <a href="#link-observability" class="block-title title-pink">Observability</a>
-        <a href="#link-ml" class="title-purple" style="width: 820px; font-weight: 900;">Machine Learning</a>
+        <a href="#" onclick="handleNavClick('Observability')" class="block-title title-pink">Observability</a>
+        <a href="#" onclick="handleNavClick('Machine Learning')" class="title-purple" style="width: 820px; font-weight: 900;">Machine Learning</a>
         <div class="ml-grid">
-          <a class="block pink" href="https://www.google.com">IT Service Intelligence</a>
-          <a class="block pink" href="#link-apm">Application Performance Monitoring</a>
-          <a class="block pink" href="#link-infra">Infrastructure Monitoring</a>
-          <a class="block pink" href="#link-rum">Real User Monitoring</a>
-          <a class="block pink" href="#link-biz">Business Insights</a>
-          <a class="block pink" href="#link-synthetics">Synthetics</a>
-          <a class="block pink" href="#link-oncall">On-Call</a>
-          <a class="block pink" href="#link-tbd">TBD</a>
+          <a class="block pink" href="#" onclick="handleNavClick('ITSI')">IT Service Intelligence</a>
+          <a class="block pink" href="#" onclick="handleNavClick('APM')">Application Performance Monitoring</a>
+          <a class="block pink" href="#" onclick="handleNavClick('Infra Monitoring')">Infrastructure Monitoring</a>
+          <a class="block pink" href="#" onclick="handleNavClick('Real User Monitoring')">Real User Monitoring</a>
+          <a class="block pink" href="#" onclick="handleNavClick('Business Insights')">Business Insights</a>
+          <a class="block pink" href="#" onclick="handleNavClick('Synthetics')">Synthetics</a>
+          <a class="block pink" href="#" onclick="handleNavClick('On-Call')">On-Call</a>
+          <a class="block pink" href="#" onclick="handleNavClick('TBD')">TBD</a>
         </div>
       </div>
     </div>
 
-    <a href="#link-udp" class="footer-block">Splunk Unified Data Platform</a>
+    <a href="#" class="footer-block" onclick="handleNavClick('Splunk Unified Data Platform')">Splunk Unified Data Platform</a>
+
+    <div id="status-box" style="margin-top: 30px; font-size: 20px; color: #fff;"></div>
   </div>
 
   <img class="splunk-logo" src="https://www.splunk.com/content/dam/splunk2/en_us/images/events/mediakit/splunk-corp-logo-w-rgb.png" alt="Splunk, a Cisco Company Logo">
