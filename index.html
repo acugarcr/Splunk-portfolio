@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Splunk Portfolio UI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      min-height: calc(100vh + 20px);
+      margin: 0;
+      background: linear-gradient(to bottom right, #000000, #2a0a3f);
+      font-family: 'Lexend', sans-serif;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 100%;
+      background: linear-gradient(to bottom, #ffb300, #f72ea7);
+      z-index: 1;
+    }
+
+    .splunk-portfolio {
+      text-align: center;
+      padding: 40px 20px;
+      color: white;
+      max-width: 1400px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .main-title {
+      font-size: 120px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .side-by-side-sections {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .block-title {
+      font-size: 52px;
+      font-weight: 700;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) inset;
+    }
+
+    .title-orange {
+      background-color: #f7941d;
+      width: 600px;
+    }
+
+    .title-pink {
+      background-color: #f72ea7;
+      width: 820px;
+    }
+
+    .title-purple {
+      background-color: #7e57c2;
+      font-size: 25px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      padding: 14.41px 20px;
+      border-radius: 8px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) inset;
+    }
+
+    .ai-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 200px);
+      font-size: 20px;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .ml-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 200px);
+      font-size: 20px;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .block {
+      background-color: #f7941d;
+      height: 100px;
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) inset;
+      text-align: center;
+    }
+
+    .block.pink {
+      background-color: #f72ea7;
+    }
+
+    .block:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  
+}
+
+    .block:active {
+      transform: translateY(1px);
+      filter: brightness(1.1);
+    }
+
+    .footer-block {
+      width: 100%;
+      max-width: 1500px;
+      background-color: #f7941d;
+      padding: 20px;
+      font-size: 25px;
+      font-weight: 700;
+      border-radius: 10px;
+      margin-top: 40px;
+      margin-left: -20px;
+      margin-right: auto;
+      display: block;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) inset;
+    }
+
+    .splunk-logo {
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+      width: 150px;
+      height: auto;
+      opacity: 0.95;
+      z-index: 999;
+    }
+
+    .block-title:hover,
+.footer-block:hover,
+.title-purple:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  
+  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+  </style>
+</head>
+<body>
+  <div class="splunk-portfolio">
+    <div class="main-title">Splunk Portfolio</div>
+
+    <div class="side-by-side-sections">
+      <!-- Security Section -->
+      <div class="section">
+        <div class="block-title title-orange" style="width: 600px;">Security</div>
+        <div class="title-purple" style="width: 600px; font-weight: 900;">Artificial Intelligence</div>
+        <div class="ai-grid">
+          <div class="block">Splunk SOAR</div>
+          <div class="block">Fraud</div>
+          <div class="block">Enterprise<br>Security</div>
+          <div class="block">Attack Analyzer</div>
+          <div class="block">Asset and Risk Intel</div>
+          <div class="block">Compliance</div>
+        </div>
+      </div>
+
+      <!-- Observability Section -->
+      <div class="section">
+        <div class="block-title title-pink">Observability</div>
+        <div class="title-purple" style="width: 820px; font-weight: 900;">Machine Learning</div>
+        <div class="ml-grid">
+          <div class="block pink">IT Service Intelligence</div>
+          <div class="block pink">Application Performance Monitoring</div>
+          <div class="block pink">Infrastructure Monitoring</div>
+          <div class="block pink">Real User Monitoring</div>
+          <div class="block pink">Business Insights</div>
+          <div class="block pink">Synthetics</div>
+          <div class="block pink">On-Call</div>
+          <div class="block pink">TBD</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-block">Splunk Unified Data Platform</div>
+  </div>
+
+  <img class="splunk-logo" src="https://www.splunk.com/content/dam/splunk2/en_us/images/events/mediakit/splunk-corp-logo-w-rgb.png" alt="Splunk, a Cisco Company Logo">
+</body>
+</html>
